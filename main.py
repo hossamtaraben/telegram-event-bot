@@ -80,6 +80,13 @@ def main():
     print("🚀 Bot is running...")
     seen_links = load_cache()
 
+     send_telegram_message({
+        'link': 'https://webook.com',
+        'img': 'https://via.placeholder.com/300x200.png?text=Test+Image',
+        'title': '✅ Bot Deployed Successfully',
+        'category': 'concerts'
+    })
+
     while True:
         try:
             events = fetch_events()
